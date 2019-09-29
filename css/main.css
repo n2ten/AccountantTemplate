@@ -1,5 +1,5 @@
 :root {
-  --brand-primary: #FFE600;
+  --brand-primary: #FA0B44;
   --secondary: #141414;
 }
 
@@ -2862,7 +2862,7 @@ h2,
 h3,
 h4 {
   font-family: "Playfair Display", serif, serif;
-  font-weight: 400;
+  font-weight: bold;
 }
 
 h2,
@@ -2875,12 +2875,12 @@ h4 {
 }
 
 ::-moz-selection {
-  background-color: #FFE600;
+  background-color: #FA0B44;
   color: black;
 }
 
 ::selection {
-  background-color: #FFE600;
+  background-color: #FA0B44;
   color: black;
 }
 
@@ -2922,14 +2922,6 @@ small {
   margin: auto;
 }
 
-.dark h3,
-.dark p,
-.dark h2,
-.dark label,
-.dark input {
-  color: white !important;
-}
-
 .bg-dark {
   background-color: #000 !important;
 }
@@ -2939,7 +2931,7 @@ small {
 }
 
 .nav .nav-item a {
-  color: white;
+  color: #333333;
 }
 
 input:-webkit-autofill,
@@ -2963,16 +2955,19 @@ select:-webkit-autofill:focus {
   position: relative;
 }
 
+a {
+  color: #333333;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
 a:hover {
   text-decoration: none;
+  color: #FA0B44;
 }
 
 .container {
   max-width: 1242px;
-}
-
-.nt-container-wider {
-  max-width: 1600px;
 }
 
 .nt-main-text {
@@ -2994,7 +2989,7 @@ a:hover {
 .btn-main {
   -webkit-box-shadow: 0px !important;
           box-shadow: 0px !important;
-  background-color: #FFE600;
+  background-color: #FA0B44;
   border: 2px solid transparent;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -3006,8 +3001,8 @@ a:hover {
 
 .btn-main:hover {
   background-color: #202020;
-  border-color: #FFE600;
-  color: white;
+  border-color: #FA0B44;
+  color: #333333;
 }
 
 .btn-main strong {
@@ -3030,7 +3025,7 @@ a:hover {
 }
 
 .btn-main:hover, .btn-main:active, .btn-main:focus {
-  background-color: #fff599;
+  background-color: #fda1b7;
   color: #333333;
 }
 
@@ -3040,7 +3035,7 @@ a:hover {
 }
 
 .btn-main:active {
-  background-color: #fffde6;
+  background-color: #ffecf0;
 }
 
 .btn-main-alt {
@@ -3065,7 +3060,7 @@ a:hover {
   bottom: 20px;
   border-radius: 0px;
   color: #333333;
-  background-color: rgba(255, 230, 0, 0.8);
+  background-color: rgba(250, 11, 68, 0.8);
   opacity: 0;
   -webkit-transform: translatey(20px);
           transform: translatey(20px);
@@ -3089,7 +3084,7 @@ a:hover {
 
 #toTop:active, #toTop:focus, #toTop:hover {
   color: #333333;
-  background-color: #ffe600;
+  background-color: #fa0b44;
 }
 
 #toTop, .mobile-square {
@@ -3133,6 +3128,10 @@ a:hover {
 .container {
   position: relative;
   padding: 0px 30px;
+}
+
+.bodyfont {
+  font-family: "Montserrat", sans-serif;
 }
 
 .nt-preloader {
@@ -3241,11 +3240,10 @@ a:hover {
 }
 
 .nt-header .navbar .navbar-nav:hover .nav-link {
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 .nt-header .navbar .nav-link {
-  font-weight: bold;
   margin-right: 10px;
   color: #333333;
   display: block;
@@ -3262,7 +3260,7 @@ a:hover {
   height: 2px;
   -webkit-transform: scalex(0);
           transform: scalex(0);
-  background: #FFE600;
+  background: #FA0B44;
   bottom: 0;
   left: 0;
   -webkit-transition: 0.2s;
@@ -3270,9 +3268,13 @@ a:hover {
   position: absolute;
 }
 
+.nt-header .navbar .nav-link.active {
+  color: #FA0B44;
+}
+
 .nt-header .navbar .nav-link:hover {
   opacity: 1 !important;
-  color: white;
+  color: #333333;
 }
 
 .nt-header .navbar .nav-link:hover:before {
@@ -3282,6 +3284,7 @@ a:hover {
 
 .nt-header .active {
   opacity: 1 !important;
+  color: #333333;
 }
 
 .nt-header .active:before {
@@ -3289,8 +3292,14 @@ a:hover {
           transform: scalex(1) !important;
 }
 
+.header-number {
+  color: #333333;
+  font-size: 25px;
+}
+
 .navbar-collapse {
-  background: rgba(0, 0, 0, 0.9);
+  background: #ebebeb;
+  margin-top: 20px;
   z-index: 99;
   position: relative;
 }
@@ -3300,14 +3309,13 @@ a:hover {
 }
 
 .mobile-square {
-  background: rgba(0, 0, 0, 0.1);
+  background: #333333;
   width: 48px;
   height: 48px;
   border-radius: 0px;
 }
 
 .mobile-square.burger {
-  border: 2px solid #FFE600;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -3360,6 +3368,15 @@ a:hover {
   bottom: -7px;
 }
 
+.mobile-square.quote {
+  color: white;
+  background-color: #FA0B44;
+}
+
+.mobile-square.quote:hover {
+  background-color: #333333;
+}
+
 .activated .mobile-burger .burger-bars {
   height: 0px;
 }
@@ -3379,6 +3396,7 @@ a:hover {
 .nt-header.scroll {
   background-color: white;
   position: fixed;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .goDown {
@@ -3454,12 +3472,12 @@ strong {
 ======================================================
 ======================================================
 */
-.nt-landing-alt .nt-header {
-  border-bottom: 0px;
+.navbar-dark .navbar-nav .nav-link:focus {
+  color: #FA0B44;
 }
 
 .layout-alt .landing-text {
-  min-height: 450px;
+  min-height: 250px;
   position: relative;
   z-index: 10;
   display: -webkit-box;
@@ -3486,29 +3504,29 @@ strong {
   width: 88%;
 }
 
-.layout-alt .btn-quote,
-.layout-alt .scroll .btn-quote {
-  min-width: 150px;
-  color: white;
-  border-color: #FFE600;
-}
-
-.layout-alt .btn-quote:hover,
-.layout-alt .scroll .btn-quote:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
 .layout-alt .landing-header {
   position: relative;
   background-size: 13%;
   background-image: url("./../img/patterns/hotel-wallpaper.png");
   padding: 134px 20px 50px 20px;
-  color: white;
+  color: #333333;
   overflow: hidden;
 }
 
 .layout-alt .landing-header .btn {
   padding: 16px 16px;
+}
+
+.layout-alt .landing-header:before {
+  content: '';
+  width: 100%;
+  height: 28%;
+  display: block;
+  background-color: #333333;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .layout-alt .nt-person {
@@ -3536,6 +3554,75 @@ strong {
   z-index: 50;
 }
 
+.service-block {
+  max-width: 300px;
+  background-size: cover;
+  padding: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.service-block:hover:before {
+  background: rgba(250, 11, 68, 0.8);
+}
+
+.service-block:before {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  content: '';
+  display: block;
+  position: absolute;
+  background: rgba(51, 51, 51, 0.8);
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.service-block h4 {
+  z-index: 1;
+  position: relative;
+  color: white;
+  font-size: 25px;
+}
+
+.service-block hr {
+  z-index: 1;
+  position: relative;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 2px 0px;
+}
+
+.service-block p {
+  z-index: 1;
+  position: relative;
+  color: white;
+  margin-bottom: 0px;
+}
+
+.services-preview {
+  z-index: 4;
+  max-width: 900px;
+  margin-left: 0;
+}
+
+.service-1 {
+  background-image: url("../img/service-img-1.jpg");
+}
+
+.service-2 {
+  background-image: url("../img/service-img-2.jpg");
+}
+
+.service-3 {
+  background-image: url("../img/service-img-3.jpg");
+}
+
+.service-4 {
+  background-image: url("../img/service-img-4.jpg");
+}
+
 .nt-pic {
   position: relative;
 }
@@ -3555,7 +3642,7 @@ strong {
   z-index: -1;
   bottom: -15px;
   right: -15px;
-  background-color: #FFE600;
+  background-color: #FA0B44;
 }
 
 .nt-pic picture:before {
@@ -3617,7 +3704,7 @@ strong {
   border-top: 0px;
   border-left: 0px;
   border-right: 0px;
-  border-bottom: 3px solid rgba(255, 230, 0, 0.8);
+  border-bottom: 3px solid rgba(250, 11, 68, 0.8);
   border-radius: 0px;
   padding: 30px 10px;
   color: white;
@@ -3625,7 +3712,7 @@ strong {
 
 .form-control:focus {
   background-color: rgba(255, 255, 255, 0.1);
-  border-color: #FFE600;
+  border-color: #FA0B44;
   -webkit-box-shadow: none;
           box-shadow: none;
   color: white;
@@ -3646,8 +3733,8 @@ strong {
           transform-origin: left;
   top: 0;
   left: 0;
-  border-top: 10px solid #FFE600;
-  border-left: 15px solid #FFE600;
+  border-top: 10px solid #FA0B44;
+  border-left: 15px solid #FA0B44;
 }
 
 #mainContactForm:after {
@@ -3656,8 +3743,8 @@ strong {
           transform-origin: right;
   bottom: 0;
   right: 0;
-  border-bottom: 10px solid #FFE600;
-  border-right: 15px solid #FFE600;
+  border-bottom: 10px solid #FA0B44;
+  border-right: 15px solid #FA0B44;
 }
 
 .nt-contact-us {
@@ -3697,7 +3784,7 @@ strong {
   width: 100%;
   height: 100%;
   position: absolute;
-  background: rgba(255, 230, 0, 0.8);
+  background: rgba(250, 11, 68, 0.8);
   left: 0;
   top: 0;
   z-index: 5;
@@ -3844,7 +3931,7 @@ strong {
 .nt-social-links a {
   margin-left: 10px;
   padding: 10px;
-  background-color: #FFE600;
+  background-color: #FA0B44;
   width: 44px;
   height: 44px;
   display: -webkit-box;
@@ -3868,12 +3955,13 @@ strong {
 }
 
 .nt-social-links a:hover {
-  background-color: #ffee4d;
+  background-color: #fc567d;
 }
 
 @media (min-width: 992px) {
   .layout-alt .landing-text {
     max-width: calc(60% - 40px);
+    min-height: 450px;
   }
   .layout-alt .nt-person {
     right: calc(20% - 150px);
@@ -3997,7 +4085,7 @@ strong {
     padding: 16px 20px;
   }
   .nt-header.scroll .btn-quote:hover {
-    background-color: #fff066;
+    background-color: #fc6f91;
   }
   .nt-header.scroll .btn-quote i {
     margin: 0px;
@@ -4008,7 +4096,7 @@ strong {
   }
   .nt-header.scroll .nt-header > .navbar-nav .nav-link,
   .nt-header.scroll .layout-alt .nt-header > .navbar-nav .nav-link {
-    color: white !important;
+    color: #333333 !important;
   }
   .nt-header.scroll .nt-header > .navbar-nav .nav-link:before,
   .nt-header.scroll .layout-alt .nt-header > .navbar-nav .nav-link:before {
@@ -4018,7 +4106,7 @@ strong {
     height: 2px;
     -webkit-transform: scalex(0);
             transform: scalex(0);
-    background: #FFE600;
+    background: #FA0B44;
     bottom: 0;
     left: 0;
     -webkit-transition: 0.2s;

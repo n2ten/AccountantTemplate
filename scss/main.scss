@@ -15,7 +15,7 @@
     &:hover {
         background-color: #202020;
         border-color: $brand-primary;
-        color: white;
+        color: $secondary;
     }
 }
 
@@ -37,7 +37,7 @@ h2,
 h3,
 h4 {
     font-family: $font-heading, serif;
-    font-weight: 400;
+    font-weight: bold;
 }
 
 h2,
@@ -91,13 +91,6 @@ small {
     margin: auto;
 }
 
-.dark h3,
-.dark p,
-.dark h2,
-.dark label,
-.dark input {
-    color: white !important;
-}
 
 .bg-dark {
     background-color: #000 !important;
@@ -107,7 +100,7 @@ small {
     font-weight: bold;
 
     a {
-        color: white;
+        color: $secondary;
     }
 }
 
@@ -132,17 +125,23 @@ select:-webkit-autofill:focus {
     position: relative;
 }
 
+a{
+    color:$secondary;
+    transition:0.2s;
+}
+
 a:hover {
     text-decoration: none;
+    color:$brand-primary;
 }
 
 .container {
     max-width: 1242px;
 }
 
-.nt-container-wider {
-    max-width: 1600px;
-}
+// .nt-container-wider {
+//     max-width: 1600px;
+// }
 
 .nt-main-text {
     max-width: 825px;
@@ -185,7 +184,7 @@ a:hover {
     &:hover,
     &:active,
     &:focus {
-        background-color: lighten(#ffe600, 30%);
+        background-color: lighten($brand-primary, 30%);
         color: $secondary;
 
         strong:before {
@@ -194,7 +193,7 @@ a:hover {
     }
 
     &:active {
-        background-color: lighten(#ffe600, 45%);
+        background-color: lighten($brand-primary, 45%);
     }
 
 }
@@ -291,6 +290,9 @@ a:hover {
     padding: 0px 30px;
 }
 
+.bodyfont{
+    font-family: $font-body;
+}
 // preloader
 .nt-preloader {
     opacity: 0.5;
@@ -301,6 +303,7 @@ a:hover {
 @import './misc/alert';
 
 @import './components/01.header';
+@import './components/service_blocks';
 
 // @import './components/02.welcome';
 
@@ -336,7 +339,7 @@ a:hover {
     .layout-alt {
         .landing-text {
             max-width: calc(60% - 40px);
-
+            min-height:450px;
         }
 
         .nt-person {
@@ -510,7 +513,7 @@ a:hover {
             padding: 16px 20px;
 
             &:hover {
-                background-color: lighten(#ffe600, 20%)
+                background-color: lighten($brand-primary, 20%)
             }
 
             i {
@@ -527,7 +530,7 @@ a:hover {
 
         .nt-header>.navbar-nav .nav-link,
         .layout-alt .nt-header>.navbar-nav .nav-link {
-            color: white !important;
+            color: $secondary !important;
 
             &:before {
                 @include beforeNavElement;

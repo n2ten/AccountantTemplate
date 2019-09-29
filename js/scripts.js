@@ -86,29 +86,51 @@ for (let navlink of navlinksAll) {
 }
 
 // recent work slider
+// Show only on mobile & tabled
 
-const rworkswiper = new Swiper('.rwork-swiper', {
+var swiper = new Swiper('.swiper-container', {
   slidesPerView: 3,
-  spaceBetween: 10,
-  initialSlide: 1,
-  centeredSlides: true,
-  slideToClickedSlide: false,
-  navigation: {
-    nextEl: '.rwork-button-next',
-    prevEl: '.rwork-button-prev',
-  },
-  pagination: {
-    el: '.rwork-swiper-pagination',
-    clickable: true,
-  },
+  spaceBetween: 20,
+
   breakpoints: {
-    // when window width is <= 640px
-    768: {
+    640: {
+      // freeMode: true,
       slidesPerView: 1,
-      initialSlide: 0
+      spaceBetween: 0,
+      
+    },
+    768: {
+      // freeMode: true,
+      slidesPerView: 2,
+      spaceBetween: 40,
     }
   }
 });
+
+
+
+// const rworkswiper = new Swiper('.rwork-swiper', {
+//   slidesPerView: 3,
+//   spaceBetween: 10,
+//   initialSlide: 1,
+//   centeredSlides: true,
+//   slideToClickedSlide: false,
+//   navigation: {
+//     nextEl: '.rwork-button-next',
+//     prevEl: '.rwork-button-prev',
+//   },
+//   pagination: {
+//     el: '.rwork-swiper-pagination',
+//     clickable: true,
+//   },
+//   breakpoints: {
+//     // when window width is <= 640px
+//     768: {
+//       slidesPerView: 1,
+//       initialSlide: 0
+//     }
+//   }
+// });
 
 /*
 ==========================================

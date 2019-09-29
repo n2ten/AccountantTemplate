@@ -51,14 +51,13 @@
 
       &:hover {
         .nav-link {
-          opacity: 0.3;
+          opacity: 0.5;
         }
       }
     }
 
 
     .nav-link {
-      font-weight: bold;
       // text-transform: uppercase;
       margin-right: 10px;
       color: $secondary;
@@ -72,10 +71,13 @@
       &:before {
         @include beforeNavElement;
       }
+      &.active{
+        color:$brand-primary;
+      }
 
       &:hover {
         opacity: 1 !important;
-        color: white;
+        color: $secondary;
 
         &:before {
           transform: scalex(1);
@@ -90,6 +92,7 @@
 
   .active {
     opacity: 1 !important;
+    color: $secondary;
   }
 
   .active:before {
@@ -98,13 +101,19 @@
 
 }
 
+// Header Number
+.header-number{
+  color: $secondary;
+  font-size:25px;
+}
+
 
 //   mobile menu trigger
 
 
 .navbar-collapse {
-  background: rgba(0, 0, 0, 0.9);
-
+  background: darken(white, 8%);
+  margin-top:20px;
   z-index: 99;
   position: relative;
 
@@ -116,14 +125,13 @@
 
 
 .mobile-square {
-  background: rgba(00, 00, 00, .1);
+  background: $secondary;
   width: 48px;
   height: 48px;
   @extend %centering;
   border-radius: 0px;
 
   &.burger {
-    border: 2px solid $brand-primary;
     // display:flex !important;
     justify-content: center;
     align-items: center;
@@ -171,7 +179,14 @@
 
     }
   }
+  &.quote{
+    color:white;
+    background-color:$brand-primary;
+    &:hover{
+      background-color:$secondary;
 
+    }
+  }
 }
 
 .activated {
@@ -213,8 +228,7 @@
 .nt-header.scroll {
   background-color: white;
   position: fixed;
-
-
+  border-bottom:1px solid lighten($secondary, 70%);
 }
 
 .goDown {
@@ -250,59 +264,6 @@
     transform: translateY(-100%);
   }
 }
-
-// Desktop header nav
-
-
-// Language dropdown
-// [aria-expanded="true"].dropdown-toggle::after {
-//   transform: rotate(90deg)
-// }
-
-// .dropdown.language {
-//   margin-right: 30px;
-//   transition: 0.2s;
-
-//   .dropdown-toggle {
-//     border: 2px solid $brand-primary;
-//     background: rgba(0, 0, 0, 0.2);
-//     color: white;
-//     padding: 16px;
-//     display: block;
-//     line-height: 16px;
-//     transition: 0.2s;
-
-//     &:after {
-//       transition: 0.1s;
-//     }
-
-//     &:hover {
-//       background: rgba(0, 0, 0, 0.5);
-//       color: rgba(255, 255, 255, 0.8);
-//     }
-
-//     &:active {
-//       background: rgba(0, 0, 0, 0.7);
-//     }
-//   }
-
-//   .dropdown-menu {
-//     border-radius: 0px;
-//     background: rgba(0, 0, 0, 0.8);
-//     min-width: auto;
-
-//     .dropdown-item {
-//       color: #efefef;
-
-//       &:hover {
-//         color: $brand-primary;
-//         background-color: black;
-//       }
-
-//     }
-//   }
-
-// }
 
 
 
@@ -375,22 +336,14 @@ strong {
 ======================================================
 */
 
-.nt-landing-alt {
-  .nt-header {
-    border-bottom: 0px
-  }
-
-
-
-
+.navbar-dark .navbar-nav .nav-link:focus{
+  color:$brand-primary;
 }
-
-
 
 .layout-alt {
 
   .landing-text {
-    min-height: 450px;
+    min-height: 250px;
     position: relative;
     z-index: 10;
     display: flex;
@@ -412,16 +365,6 @@ strong {
     width: 88%;
   }
 
-  .btn-quote,
-  .scroll .btn-quote {
-    min-width: 150px;
-    color: white;
-    border-color: $brand-primary;
-
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-  }
 
 
 
@@ -430,14 +373,22 @@ strong {
     background-size:13%;
     background-image:url('./../img/patterns/hotel-wallpaper.png');
     padding: 134px 20px 50px 20px;
-    color: white;
+    color: $secondary;
     overflow: hidden;
-
- 
-
     .btn {
       padding: 16px 16px;
 
+    }
+    &:before{
+      content:'';
+      width: 100%;
+      height:28%;
+      display: block;
+      background-color:$secondary;
+      position: absolute;
+      bottom:0;
+      left:0;
+      right: 0;
     }
   }
 

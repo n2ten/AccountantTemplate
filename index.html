@@ -22,6 +22,7 @@
 		<link
 			href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i|Playfair+Display:700,700i&display=swap"
 			rel="stylesheet">
+		<link rel="stylesheet" href="css/swiper/swiper.min.css">
 		<link rel="stylesheet" href="css/main.css">
 
 	</head>
@@ -103,14 +104,65 @@
 			<div id="top"></div>
 
 			<section class="landing-header style-changer">
-				<div class="container h-100 p-0 pl-md-30 pr-md-30">
-					<div class="landing-text h-100">
+				<div class="container h-100">
+					<div class="landing-text">
 						<h1>Ottawa Accounting</h1>
 						<p>
 							Corporate & Personal Taxes
 						</p>
 					</div>
 
+					<!-- <div class="services-preview">
+						<div class="service-block service-1">
+							<h4 class="bodyfont">Service 1</h4>
+							<hr>
+							<p>Subheading Description Text Goes Here</p>
+						</div>
+						<div class="service-block service-2">
+							<h4 class="bodyfont">Service 2</h4>
+							<hr>
+							<p>Subheading Description Text Goes Here</p>
+						</div>
+						<div class="service-block service-3">
+							<h4 class="bodyfont">Service 3</h4>
+							<hr>
+							<p>Subheading Description Text Goes Here</p>
+						</div>
+					</div> -->
+					<div class="swiper-container services-preview">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="service-block service-1">
+									<h4 class="bodyfont">Service 1</h4>
+									<hr>
+									<p>Subheading Description Text Goes Here</p>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="service-block service-2">
+									<h4 class="bodyfont">Service 2</h4>
+									<hr>
+									<p>Subheading Description Text Goes Here</p>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="service-block service-3">
+									<h4 class="bodyfont">Service 3</h4>
+									<hr>
+									<p>Subheading Description Text Goes Here</p>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="service-block service-4">
+									<h4 class="bodyfont">Service 4</h4>
+									<hr>
+									<p>Subheading Description Text Goes Here</p>
+								</div>
+							</div>
+						</div>
+						<!-- Add Pagination -->
+						<div class="swiper-pagination"></div>
+					</div>
 				</div>
 
 				<img class="nt-person" src="./img/work-on-demand-person.png" alt="">
@@ -400,23 +452,6 @@
 
 		</div>
 		<a href="#top" id="toTop"><i class="fa fa-chevron-up"></i></a>
-		<script type="application/ld+json">
-			{
-				"@context": "http://schema.org",
-				"@type": "LocalBusiness",
-				"address": {
-					"@type": "PostalAddress",
-					"addressLocality": "Ottawa",
-					"addressRegion": "ON",
-					"streetAddress": "331 James Street",
-					"postalCode": "K1R 5M8"
-				},
-				"name": "N2TEN",
-				"image": "https://n2ten.com/img/n2tenBanner.jpg",
-				"email": "info@n2ten.com",
-				"telephone": "343-988-8337"
-			}
-		</script>
 		<script defer src="js/jquery-3.4.1.min.js"></script>
 		<script defer src="js/popper.min.js"></script>
 		<script defer src="js/bootstrap/bootstrap.min.js"></script>
