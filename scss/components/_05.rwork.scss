@@ -48,7 +48,7 @@
                 }
 
                 h3 {
-                    // color: var(--secondary);
+                    // color: $secondary;
                     text-shadow: none;
                     transform: translatey(0px);
                 }
@@ -121,7 +121,7 @@
         transition: 0.3s;
 
         .more {
-            color: var(--brand-primary);
+            color: $brand-primary;
             position: absolute;
             top: calc(35% - 75px);
             bottom: 0;
@@ -141,7 +141,7 @@
             opacity: 0;
             transform: translatey(10px);
             transition: 0.2s;
-            color: var(--brand-primary);
+            color: $brand-primary;
         }
 
         h3 {
@@ -242,7 +242,7 @@
 }
 
 .swiper-pagination-bullet-active {
-    background: var(--brand-primary);
+    background: $brand-primary;
 }
 
 #work {

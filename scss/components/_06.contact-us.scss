@@ -42,7 +42,7 @@
 
     &:focus {
         background-color: rgba(255, 255, 255, 0.1);
-        border-color: var(--brand-primary);
+        border-color: $brand-primary;
         box-shadow: none;
         color: white;
     }
@@ -64,8 +64,8 @@
         transform-origin: left;
         top: 0;
         left: 0;
-        border-top: 10px solid var(--brand-primary);
-        border-left: 15px solid var(--brand-primary);
+        border-top: 10px solid $brand-primary;
+        border-left: 15px solid $brand-primary;
     }
 
     &:after {
@@ -74,8 +74,8 @@
         transform-origin: right;
         bottom: 0;
         right: 0;
-        border-bottom: 10px solid var(--brand-primary);
-        border-right: 15px solid var(--brand-primary);
+        border-bottom: 10px solid $brand-primary;
+        border-right: 15px solid $brand-primary;
     }
 }
 

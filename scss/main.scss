@@ -4,17 +4,17 @@
 
 
 @mixin button-color {
-    background-color: var(--brand-primary);
+    background-color: $brand-primary;
     border: 2px solid transparent;
     transition: 0.2s;
-    color: var(--secondary);
+    color: $secondary;
     text-transform: initial;
     font-weight: bold;
     line-height: 1rem;
 
     &:hover {
         background-color: #202020;
-        border-color: var(--brand-primary);
+        border-color: $brand-primary;
         color: white;
     }
 }
@@ -37,7 +37,6 @@ h2,
 h3,
 h4 {
     font-family: $font-heading, serif;
-    text-transform: uppercase;
     font-weight: 400;
 }
 
@@ -51,7 +50,7 @@ h4 {
 }
 
 ::selection {
-    background-color: var(--brand-primary);
+    background-color: $brand-primary;
     color: black;
 }
 
@@ -178,7 +177,7 @@ a:hover {
         display: block;
         height: 2px;
         position: absolute;
-        background: var(--secondary);
+        background: $secondary;
         transform: scalex(0);
         transition: 0.2s;
     }
@@ -187,7 +186,7 @@ a:hover {
     &:active,
     &:focus {
         background-color: lighten(#ffe600, 30%);
-        color: var(--secondary);
+        color: $secondary;
 
         strong:before {
             transform: scalex(1);
@@ -224,7 +223,7 @@ a:hover {
     right: 20px;
     bottom: 20px;
     border-radius: 0px;
-    color: var(--secondary);
+    color: $secondary;
     background-color: rgba($brand-primary, 0.8);
     opacity: 0;
     transform: translatey(20px);
@@ -244,7 +243,7 @@ a:hover {
     &:active,
     &:focus,
     &:hover {
-        color: var(--secondary);
+        color: $secondary;
         background-color: rgba($brand-primary, 1);
     }
 }
@@ -303,25 +302,26 @@ a:hover {
 
 @import './components/01.header';
 
-@import './components/02.welcome';
+// @import './components/02.welcome';
 
 @import './components/aboutn2ten';
 
 // @import '03.testimonials';
 
-@import './components/04.services';
+// @import './components/04.services';
 
-@import './components/process';
+// @import './components/process';
 
-@import './components/05.rwork';
+// @import './components/05.rwork';
 
-@import './components/whychoose';
+// @import './components/whychoose';
 
 @import './components/06.contact-us';
 
+@import './components/08.quote-form';
+
 @import './components/07.footer';
 
-@import './components/08.quote-form';
 
 
 

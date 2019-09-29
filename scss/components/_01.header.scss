@@ -1,10 +1,16 @@
+/*
+==========================================
+=======  General Header Styling  ===========
+==========================================
+*/
+
 @mixin beforeNavElement {
   content: '';
   display: block;
   width: 100%;
   height: 2px;
   transform: scalex(0);
-  background: var(--brand-primary);
+  background: $brand-primary;
   bottom: 0;
   left: 0;
   transition: 0.2s;
@@ -22,26 +28,26 @@
   transition: opacity 0.05s, padding 0.09s;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
-  .navbar-brand img,
-  .navbar-brand #svg-logo {
-    max-height: 80px;
-    transition: 0.1s;
-  }
+  // .navbar-brand img,
+  // .navbar-brand #svg-logo {
+  //   max-height: 80px;
+  //   transition: 0.1s;
+  // }
 
-  .navbar-brand {
-    width: 30% !important;
+  // .navbar-brand {
+  //   width: 30% !important;
 
-    svg {
-      max-width: 100%;
-    }
-  }
+  //   svg {
+  //     max-width: 100%;
+  //   }
+  // }
 
   .navbar {
     width: 100%;
 
     .navbar-nav {
       width: 100%;
-      justify-content: left;
+      justify-content: flex-start;
 
       &:hover {
         .nav-link {
@@ -55,7 +61,7 @@
       font-weight: bold;
       // text-transform: uppercase;
       margin-right: 10px;
-      color: white;
+      color: $secondary;
       display: block;
       // font-size:1rem;
       // font-size: 0.875rem;
@@ -117,7 +123,7 @@
   border-radius: 0px;
 
   &.burger {
-    border: 2px solid var(--brand-primary);
+    border: 2px solid $brand-primary;
     // display:flex !important;
     justify-content: center;
     align-items: center;
@@ -191,9 +197,9 @@
 
 
 
-.quote {
-  @include button-color;
-}
+// .quote {
+//   @include button-color;
+// }
 
 
 // .mobile-header-icon {
@@ -205,7 +211,7 @@
 
 
 .nt-header.scroll {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: white;
   position: fixed;
 
 
@@ -249,54 +255,54 @@
 
 
 // Language dropdown
-[aria-expanded="true"].dropdown-toggle::after {
-  transform: rotate(90deg)
-}
+// [aria-expanded="true"].dropdown-toggle::after {
+//   transform: rotate(90deg)
+// }
 
-.dropdown.language {
-  margin-right: 30px;
-  transition: 0.2s;
+// .dropdown.language {
+//   margin-right: 30px;
+//   transition: 0.2s;
 
-  .dropdown-toggle {
-    border: 2px solid var(--brand-primary);
-    background: rgba(0, 0, 0, 0.2);
-    color: white;
-    padding: 16px;
-    display: block;
-    line-height: 16px;
-    transition: 0.2s;
+//   .dropdown-toggle {
+//     border: 2px solid $brand-primary;
+//     background: rgba(0, 0, 0, 0.2);
+//     color: white;
+//     padding: 16px;
+//     display: block;
+//     line-height: 16px;
+//     transition: 0.2s;
 
-    &:after {
-      transition: 0.1s;
-    }
+//     &:after {
+//       transition: 0.1s;
+//     }
 
-    &:hover {
-      background: rgba(0, 0, 0, 0.5);
-      color: rgba(255, 255, 255, 0.8);
-    }
+//     &:hover {
+//       background: rgba(0, 0, 0, 0.5);
+//       color: rgba(255, 255, 255, 0.8);
+//     }
 
-    &:active {
-      background: rgba(0, 0, 0, 0.7);
-    }
-  }
+//     &:active {
+//       background: rgba(0, 0, 0, 0.7);
+//     }
+//   }
 
-  .dropdown-menu {
-    border-radius: 0px;
-    background: rgba(0, 0, 0, 0.8);
-    min-width: auto;
+//   .dropdown-menu {
+//     border-radius: 0px;
+//     background: rgba(0, 0, 0, 0.8);
+//     min-width: auto;
 
-    .dropdown-item {
-      color: #efefef;
+//     .dropdown-item {
+//       color: #efefef;
 
-      &:hover {
-        color: var(--brand-primary);
-        background-color: black;
-      }
+//       &:hover {
+//         color: $brand-primary;
+//         background-color: black;
+//       }
 
-    }
-  }
+//     }
+//   }
 
-}
+// }
 
 
 
@@ -323,55 +329,54 @@ strong {
   ;
 }
 
-.masthead {
-  // padding-top:150px;
-  background-image: url(../img/BannerBG.jpg);
-  background-size: cover;
-  width: 100%;
-  height: 750px;
-  color: white;
-  border-bottom: 10px solid var(--brand-primary);
+// .masthead {
+//   // padding-top:150px;
+//   background-image: url(../img/BannerBG.jpg);
+//   background-size: cover;
+//   width: 100%;
+//   height: 750px;
+//   color: white;
+//   border-bottom: 10px solid $brand-primary;
 
-  .container {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
+//   .container {
+//     height: 100%;
+//     display: flex;
+//     justify-content: center;
+//     flex-direction: column;
+//   }
 
-  .masthead--text {
-    transform: translateY(-50px);
+//   .masthead--text {
+//     transform: translateY(-50px);
 
-    h1 {
-      font-size: 60px;
-      color: white;
-      @extend %mb;
+//     h1 {
+//       font-size: 60px;
+//       color: white;
+//       @extend %mb;
 
-      span {
-        font-weight: 400;
-      }
+//       span {
+//         font-weight: 400;
+//       }
 
-    }
+//     }
 
-    p {
-      font-size: 16px;
-    }
-  }
+//     p {
+//       font-size: 16px;
+//     }
+//   }
 
-}
+// }
 
 
 
 /*
 ======================================================
-========== Landing Header alt ========================
+================== Landing Header ====================
 ======================================================
 ======================================================
 */
 
 .nt-landing-alt {
   .nt-header {
-
     border-bottom: 0px
   }
 
@@ -383,9 +388,6 @@ strong {
 
 
 .layout-alt {
-
-
-
 
   .landing-text {
     min-height: 450px;
@@ -421,18 +423,12 @@ strong {
     }
   }
 
-  .backgrounds {
 
-    background-color: var(--brand-primary);
-  }
 
   .landing-header {
     position: relative;
-    background-color: $brand-primary;
-    // min-height: 750px;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
+    background-size:13%;
+    background-image:url('./../img/patterns/hotel-wallpaper.png');
     padding: 134px 20px 50px 20px;
     color: white;
     overflow: hidden;
@@ -444,31 +440,6 @@ strong {
 
     }
   }
-
-  .form-control {
-    background-color: white;
-    border:1px solid white;
-    color: #000 !important;
-
-    transition: 0.2s;
-
-    &:focus {
-      box-shadow: 0 0 0 0.2rem rgba($brand-primary, 0.8);
-      background-color:white;
-    }
-  }
-
-  .ottawabg {
-    width: 100%;
-    object-fit: cover;
-    height: 90%;
-    object-position: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-  }
-
 
   .nt-person {
     position: absolute;
@@ -494,10 +465,4 @@ strong {
   height: 50px;
   justify-content: center;
   z-index: 50;
-}
-
-.nt-pillars{
-  li{
-    padding-bottom:10px;
-  }
 }
