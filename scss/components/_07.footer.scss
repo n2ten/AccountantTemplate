@@ -1,0 +1,41 @@
+.nt-logo-footer {
+    max-height: 80px;
+}
+
+.nt-copyright-text {
+    font-size: 16px;
+    color: #ccc;
+}
+
+.nav-link {
+    padding: .3rem;
+}
+
+.nt-social-links {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 15px;
+
+    a {
+        margin-left: 10px;
+        padding: 10px;
+        background-color: var(--brand-primary);
+        width: 44px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.1s;
+        border-radius: 50%;
+    }
+
+    i {
+        color: #000;
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    a:hover {
+        background-color: lighten($brand-primary, 15%)
+    }
+}
