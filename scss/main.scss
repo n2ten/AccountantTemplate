@@ -97,6 +97,9 @@ small {
 .bg-dark {
     background-color: #000 !important;
 }
+.bg-light {
+    background-color: lighten($secondary, 70%) !important;
+}
 
 .nav .nav-item {
     font-weight: bold;
@@ -357,6 +360,9 @@ a:hover {
         .landing-text {
             max-width: calc(60% - 40px);
             min-height:450px;
+            h1 {
+                font-size: 70px;
+              }
         }
 
         .nt-person {

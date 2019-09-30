@@ -2931,6 +2931,10 @@ small {
   background-color: #000 !important;
 }
 
+.bg-light {
+  background-color: #e6e6e6 !important;
+}
+
 .nav .nav-item {
   font-weight: bold;
 }
@@ -3499,7 +3503,7 @@ strong {
 }
 
 .layout-alt .landing-text h1 {
-  font-size: 60px;
+  font-size: 40px;
 }
 
 .layout-alt .nt-header {
@@ -3846,6 +3850,10 @@ strong {
   background-color: white;
 }
 
+footer {
+  border-top: 1px solid #cccccc;
+}
+
 .nt-logo-footer {
   max-height: 80px;
 }
@@ -3901,6 +3909,9 @@ strong {
   .layout-alt .landing-text {
     max-width: calc(60% - 40px);
     min-height: 450px;
+  }
+  .layout-alt .landing-text h1 {
+    font-size: 70px;
   }
   .layout-alt .nt-person {
     right: calc(20% - 150px);
