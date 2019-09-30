@@ -2904,7 +2904,7 @@ img {
 
 small {
   font-size: 60%;
-  opacity: 0.5;
+  opacity: 0.8;
   letter-spacing: initial;
 }
 
@@ -2920,6 +2920,11 @@ small {
   text-align: center;
   max-width: 800px;
   margin: auto;
+}
+
+.page-break {
+  max-width: 1262px;
+  border-bottom: 1px solid #cccccc;
 }
 
 .bg-dark {
@@ -2967,7 +2972,7 @@ a:hover {
 }
 
 .container {
-  max-width: 1242px;
+  max-width: 1262px;
 }
 
 .nt-main-text {
@@ -2982,18 +2987,49 @@ a:hover {
 
 .btn {
   border-radius: 0px;
-  padding: 16px 66px;
-  border: 2px solid;
+  text-decoration: none !important;
+}
+
+.btn.btn-link {
+  padding: 5px 0px;
+  color: #333333;
+  font-weight: bold;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  position: relative;
+}
+
+.btn.btn-link:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  bottom: -3px;
+  background-color: #FA0B44;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.btn.btn-link:hover {
+  color: #FA0B44;
+}
+
+.btn.btn-link:hover:before {
+  bottom: -8px;
 }
 
 .btn-main {
+  padding: 16px 66px;
+  border: 2px solid;
   -webkit-box-shadow: 0px !important;
           box-shadow: 0px !important;
   background-color: #FA0B44;
   border: 2px solid transparent;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  color: #333333;
+  color: white;
   text-transform: initial;
   font-weight: bold;
   line-height: 1rem;
@@ -3002,44 +3038,24 @@ a:hover {
 .btn-main:hover {
   background-color: #202020;
   border-color: #FA0B44;
-  color: #333333;
+  color: white;
 }
 
 .btn-main strong {
   position: relative;
 }
 
-.btn-main strong:before {
-  content: '';
-  left: 0;
-  bottom: -3px;
-  width: 100%;
-  display: block;
-  height: 2px;
-  position: absolute;
-  background: #333333;
-  -webkit-transform: scalex(0);
-          transform: scalex(0);
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-
 .btn-main:hover, .btn-main:active, .btn-main:focus {
-  background-color: #fda1b7;
-  color: #333333;
-}
-
-.btn-main:hover strong:before, .btn-main:active strong:before, .btn-main:focus strong:before {
-  -webkit-transform: scalex(1);
-          transform: scalex(1);
+  background-color: #ce0434;
+  color: white;
 }
 
 .btn-main:active {
-  background-color: #ffecf0;
+  background-color: #b5042e;
 }
 
 .btn-main-alt {
-  color: #000;
+  color: white;
   border-color: #000;
 }
 
@@ -3059,7 +3075,7 @@ a:hover {
   right: 20px;
   bottom: 20px;
   border-radius: 0px;
-  color: #333333;
+  color: white;
   background-color: rgba(250, 11, 68, 0.8);
   opacity: 0;
   -webkit-transform: translatey(20px);
@@ -3083,7 +3099,6 @@ a:hover {
 }
 
 #toTop:active, #toTop:focus, #toTop:hover {
-  color: #333333;
   background-color: #fa0b44;
 }
 
@@ -3099,19 +3114,9 @@ a:hover {
           align-items: center;
 }
 
-#mainContactForm:before, #mainContactForm:after {
-  content: '';
-  display: block;
-  width: 172px;
-  height: 60px;
-  position: absolute;
-  opacity: 0;
-  -webkit-transform: scalex(0.7);
-          transform: scalex(0.7);
-  -webkit-transition: opacity 0.1s, 0.2s ease, -webkit-transform 0.4s;
-  transition: opacity 0.1s, 0.2s ease, -webkit-transform 0.4s;
-  transition: opacity 0.1s, transform 0.4s, 0.2s ease;
-  transition: opacity 0.1s, transform 0.4s, 0.2s ease, -webkit-transform 0.4s;
+.layout-alt .landing-header, .nt-form-banner {
+  background-size: 13%;
+  background-image: url("./../img/patterns/hotel-wallpaper.png");
 }
 
 .btn-lg {
@@ -3247,6 +3252,7 @@ a:hover {
   margin-right: 10px;
   color: #333333;
   display: block;
+  font-weight: bold;
   letter-spacing: 1.2px;
   position: relative;
   -webkit-transition: 0.2s;
@@ -3257,7 +3263,7 @@ a:hover {
   content: '';
   display: block;
   width: 100%;
-  height: 2px;
+  height: 3px;
   -webkit-transform: scalex(0);
           transform: scalex(0);
   background: #FA0B44;
@@ -3274,7 +3280,7 @@ a:hover {
 
 .nt-header .navbar .nav-link:hover {
   opacity: 1 !important;
-  color: #333333;
+  color: #FA0B44;
 }
 
 .nt-header .navbar .nav-link:hover:before {
@@ -3284,7 +3290,7 @@ a:hover {
 
 .nt-header .active {
   opacity: 1 !important;
-  color: #333333;
+  color: #FA0B44;
 }
 
 .nt-header .active:before {
@@ -3506,8 +3512,6 @@ strong {
 
 .layout-alt .landing-header {
   position: relative;
-  background-size: 13%;
-  background-image: url("./../img/patterns/hotel-wallpaper.png");
   padding: 134px 20px 50px 20px;
   color: #333333;
   overflow: hidden;
@@ -3681,41 +3685,23 @@ strong {
 }
 
 .form-group label {
-  position: absolute;
-  top: calc(100% - 42px);
-  left: 30px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  color: #333333;
   opacity: 0.5;
   cursor: text;
 }
 
-.form-group .activated {
-  top: 0;
-  -webkit-transform: translate(-10px, calc(-5px - 100%)) scale(0.8);
-          transform: translate(-10px, calc(-5px - 100%)) scale(0.8);
-  -webkit-transform-origin: left;
-          transform-origin: left;
-  opacity: 1;
-}
-
 .form-control {
-  background-color: rgba(255, 255, 255, 0.3);
-  border-top: 0px;
-  border-left: 0px;
-  border-right: 0px;
-  border-bottom: 3px solid rgba(250, 11, 68, 0.8);
+  background-color: #fafafa;
+  border: 1px solid #333333;
   border-radius: 0px;
   padding: 30px 10px;
   color: white;
 }
 
 .form-control:focus {
-  background-color: rgba(255, 255, 255, 0.1);
   border-color: #FA0B44;
   -webkit-box-shadow: none;
           box-shadow: none;
-  color: white;
 }
 
 /*
@@ -3725,26 +3711,8 @@ strong {
 */
 #mainContactForm {
   position: relative;
-}
-
-#mainContactForm:before {
-  opacity: 1;
-  -webkit-transform-origin: left;
-          transform-origin: left;
-  top: 0;
-  left: 0;
-  border-top: 10px solid #FA0B44;
-  border-left: 15px solid #FA0B44;
-}
-
-#mainContactForm:after {
-  opacity: 1;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  bottom: 0;
-  right: 0;
-  border-bottom: 10px solid #FA0B44;
-  border-right: 15px solid #FA0B44;
+  border: 1px solid #d9d9d9;
+  border-top: 7px solid #FA0B44;
 }
 
 .nt-contact-us {
@@ -3759,7 +3727,7 @@ strong {
   z-index: 10;
   max-width: 900px;
   margin: auto;
-  background: rgba(0, 0, 0, 0.9);
+  background: #333333;
   padding: 60px 35px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -3768,14 +3736,11 @@ strong {
 }
 
 .darkener #mainContactForm {
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: white;
   -webkit-box-shadow: 0px 30px 30px -35px rgba(255, 230, 255, 0.3);
           box-shadow: 0px 30px 30px -35px rgba(255, 230, 255, 0.3);
-}
-
-.darkener #mainContactForm:before, .darkener #mainContactForm:after {
-  width: 230px;
-  height: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 7px solid #FA0B44;
 }
 
 .darkener:before {
@@ -3784,7 +3749,7 @@ strong {
   width: 100%;
   height: 100%;
   position: absolute;
-  background: rgba(250, 11, 68, 0.8);
+  background: rgba(0, 0, 0, 0.4);
   left: 0;
   top: 0;
   z-index: 5;
@@ -3838,13 +3803,14 @@ strong {
 }
 
 .nt-form-banner {
-  background-image: url("./../img/landingcontact-bg.jpg");
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
   padding-top: 80px;
   padding-bottom: 250px;
 }
 
 .landingContactForm {
-  background: #000;
+  background: white;
   margin-top: -200px;
   padding: 60px 30px;
 }
@@ -3856,13 +3822,14 @@ strong {
 
 .nt-signup .form-group label {
   position: static;
-  color: white;
+  color: #666666;
   opacity: 1;
+  font-weight: bold;
 }
 
 .nt-signup .form-control {
-  color: #000;
-  border: 1px solid white;
+  color: #333333;
+  border: 1px solid #b3b3b3;
 }
 
 .nt-signup .activated {
@@ -3870,39 +3837,12 @@ strong {
           transform: scale(1);
 }
 
+.nt-signup .activated label {
+  color: white;
+}
+
 .nt-signup.hidedarkener #mainContactForm {
-  background-color: #000 !important;
-}
-
-.nt-quote-form .nt-quote-input {
-  background: transparent;
-  border: 0px;
-  border-bottom: 1px solid white;
-  padding-left: 10px;
-}
-
-.nt-quote-form .quoteName {
-  width: 130px;
-}
-
-.nt-quote-form .nt-service-options {
-  display: inline-block;
-}
-
-.nt-quote-form .labelgroup {
-  display: inline-block;
-}
-
-.nt-quote-form .labelgroup label {
-  opacity: 0.7;
-  cursor: pointer;
-  display: block;
-  margin-right: 10px;
-}
-
-.nt-quote-form .labelgroup label.selected {
-  opacity: 1;
-  font-weight: bold;
+  background-color: white;
 }
 
 .nt-logo-footer {
@@ -3931,7 +3871,6 @@ strong {
 .nt-social-links a {
   margin-left: 10px;
   padding: 10px;
-  background-color: #FA0B44;
   width: 44px;
   height: 44px;
   display: -webkit-box;
@@ -3945,7 +3884,6 @@ strong {
           align-items: center;
   -webkit-transition: 0.1s;
   transition: 0.1s;
-  border-radius: 50%;
 }
 
 .nt-social-links i {
@@ -4043,7 +3981,6 @@ strong {
     background-color: #000;
   }
   .layout-alt .nt-header:not(.scroll) .navbar .nav-link:hover, .layout-alt .nt-header:not(.scroll) .navbar .nav-link:active, .layout-alt .nt-header:not(.scroll) .navbar .nav-link:visited {
-    color: #000;
     border: 0px;
   }
   .layout-alt .btn-quote {
@@ -4103,7 +4040,7 @@ strong {
     content: '';
     display: block;
     width: 100%;
-    height: 2px;
+    height: 3px;
     -webkit-transform: scalex(0);
             transform: scalex(0);
     background: #FA0B44;
@@ -4156,7 +4093,7 @@ strong {
 
 @media (min-width: 1600px) {
   .layout-alt .nt-person {
-    right: calc(40% - 335px);
+    right: calc(30% - 335px);
   }
   .layout-alt .navbar-collapse .navbar-nav .nav-item a {
     margin-right: 20px !important;

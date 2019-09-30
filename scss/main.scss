@@ -7,7 +7,7 @@
     background-color: $brand-primary;
     border: 2px solid transparent;
     transition: 0.2s;
-    color: $secondary;
+    color: white;
     text-transform: initial;
     font-weight: bold;
     line-height: 1rem;
@@ -15,7 +15,7 @@
     &:hover {
         background-color: #202020;
         border-color: $brand-primary;
-        color: $secondary;
+        color: white;
     }
 }
 
@@ -66,7 +66,6 @@ img {
 .heading {
     font-size: 50px;
 
-
     small {
         display: block;
         font-size: 20px;
@@ -76,7 +75,7 @@ img {
 
 small {
     font-size: 60%;
-    opacity: 0.5;
+    opacity: 0.8;
     letter-spacing: initial;
 
 }
@@ -90,7 +89,10 @@ small {
     max-width: 800px;
     margin: auto;
 }
-
+.page-break{
+    max-width:$max-width;
+    border-bottom:1px solid lighten($secondary, 60%);
+}
 
 .bg-dark {
     background-color: #000 !important;
@@ -136,7 +138,7 @@ a:hover {
 }
 
 .container {
-    max-width: 1242px;
+    max-width:$max-width;
 }
 
 // .nt-container-wider {
@@ -155,12 +157,39 @@ a:hover {
 
 //   Styling the buttons
 .btn {
-    border-radius: 0px;
-    padding: 16px 66px;
-    border: 2px solid;
+    border-radius: 0px; 
+    text-decoration: none !important;
+}
+
+.btn.btn-link{
+    padding:5px 0px;
+    color:$secondary;
+    font-weight:bold;
+    transition: 0.2s;
+    position: relative;
+
+    &:before{
+        content:'';
+        display:block;
+        position:absolute;
+        width:100%;
+        height:3px;
+        left:0;
+        bottom:-3px;
+        background-color:$brand-primary;
+        transition:0.2s;
+    }
+    &:hover{
+        color:$brand-primary;
+        &:before{
+            bottom:-8px;
+        }
+    }
 }
 
 .btn-main {
+    padding: 16px 66px;
+    border: 2px solid;
     box-shadow: 0px !important;
     @include button-color;
 
@@ -168,38 +197,21 @@ a:hover {
         position: relative;
     }
 
-    strong:before {
-        content: '';
-        left: 0;
-        bottom: -3px;
-        width: 100%;
-        display: block;
-        height: 2px;
-        position: absolute;
-        background: $secondary;
-        transform: scalex(0);
-        transition: 0.2s;
-    }
-
     &:hover,
     &:active,
     &:focus {
-        background-color: lighten($brand-primary, 30%);
-        color: $secondary;
-
-        strong:before {
-            transform: scalex(1);
-        }
+        background-color: darken($brand-primary, 10%);
+        color: white;
     }
 
     &:active {
-        background-color: lighten($brand-primary, 45%);
+        background-color: darken($brand-primary, 15%);
     }
 
 }
 
 .btn-main-alt {
-    color: #000;
+    color: white;
     border-color: #000;
 
     &:hover {
@@ -222,7 +234,7 @@ a:hover {
     right: 20px;
     bottom: 20px;
     border-radius: 0px;
-    color: $secondary;
+    color: white;
     background-color: rgba($brand-primary, 0.8);
     opacity: 0;
     transform: translatey(20px);
@@ -242,7 +254,7 @@ a:hover {
     &:active,
     &:focus,
     &:hover {
-        color: $secondary;
+        // color: white;
         background-color: rgba($brand-primary, 1);
     }
 }
@@ -259,6 +271,11 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+%patternBG{
+    background-size:13%;
+    background-image:url('./../img/patterns/hotel-wallpaper.png');
 }
 
 %borderzExpanded {
@@ -321,7 +338,7 @@ a:hover {
 
 @import './components/06.contact-us';
 
-@import './components/08.quote-form';
+// @import './components/08.quote-form';
 
 @import './components/07.footer';
 
@@ -450,7 +467,6 @@ a:hover {
                     &:hover,
                     &:active,
                     &:visited {
-                        color: #000;
                         border: 0px;
                     }
 
@@ -591,7 +607,7 @@ a:hover {
 @media (min-width: 1600px) {
     .layout-alt {
         .nt-person {
-            right: calc(40% - 335px);
+            right: calc(30% - 335px);
         }
 
         .navbar-collapse .navbar-nav .nav-item a {
